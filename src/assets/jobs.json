@@ -85,32 +85,18 @@
       }
     },
     {
-      "id": "7248",
-      "type": "Remote",
-      "title": "Shaine Mcdonald",
-      "description": "Illo voluptate simil",
-      "salary": "$80K - $90K",
+      "type": "Full-Time",
+      "title": "Updated Job",
+      "description": "This is test description",
+      "salary": "$90K - $100K",
       "location": "Enim nemo eum adipis",
       "company": {
         "name": "Moreno and Berry Associates",
         "description": "Id molestiae volupt",
         "contactEmail": "deni@mailinator.com",
         "contactPhone": "+1 (269) 314-4877"
-      }
-    },
-    {
-      "id": "1d32",
-      "type": "Full-Time",
-      "title": "Charles Paul",
-      "description": "Eum vel enim unde ve",
-      "salary": "$50K - $60K",
-      "location": "Ipsum eiusmod quas ",
-      "company": {
-        "name": "Ochoa Duke Co",
-        "description": "Velit do omnis vel ",
-        "contactEmail": "gyqyqu@mailinator.com",
-        "contactPhone": "+1 (834) 319-1903"
-      }
+      },
+      "id": "7248"
     }
   ]
 }

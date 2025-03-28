@@ -1,11 +1,14 @@
 <script setup>
   import { ref, onMounted } from 'vue';
-  import { RouterLink, useRoute} from 'vue-router';
+  import { RouterLink, useRoute, useRouter} from 'vue-router';
+  import { useToast } from 'vue-toastification';
   
   import axios from 'axios';
-import BackButton from '@/components/BackButton.vue';
+  import BackButton from '@/components/BackButton.vue';
 
   const route = useRoute();
+  const router = useRouter();
+  const toast = useToast();
   const jobId = route.params.id;
   const job = ref({
     type: '',
@@ -21,6 +24,20 @@ import BackButton from '@/components/BackButton.vue';
     }
   });
 
+  const deleteJob = async () => {
+    try{
+      const confirm =window.confirm('Delete');
+      if(confirm){
+        await axios.delete(`/api/jobs/${jobId}`);
+        toast.success('Job deleted successfully');
+        router.push('/jobs');
+      }
+      
+    }catch(error){
+      console.log(error);
+      toast.error('Error while deleting');
+    }
+  }
   onMounted(async() => {
     try{
       const response = await axios.get(`/api/jobs/${jobId}`);
@@ -101,7 +118,7 @@ import BackButton from '@/components/BackButton.vue';
                 class="bg-green-500 hover:bg-green-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >Edit Job</RouterLink
               >
-              <button
+              <button @click="deleteJob"
                 class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
               >
                 Delete Job
