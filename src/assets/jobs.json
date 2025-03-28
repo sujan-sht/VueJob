@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "type": "Full-Time",
-      "title": "Updated Job",
-      "description": "This is test description",
-      "salary": "$90K - $100K",
-      "location": "Enim nemo eum adipis",
-      "company": {
-        "name": "Moreno and Berry Associates",
-        "description": "Id molestiae volupt",
-        "contactEmail": "deni@mailinator.com",
-        "contactPhone": "+1 (269) 314-4877"
-      },
-      "id": "7248"
     }
   ]
 }
